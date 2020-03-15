@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description>SOAP proxy generated from undefined</Description>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>extract-param</Name>
+            </Step>
+            <Step>
+                <Name>create-xml-using-params</Name>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <Name>Addition</Name>
+                <Condition>(proxy.pathsuffix MatchesPath "/add")</Condition>
+            </Step>
+            <Step>
+                <Name>Subraction</Name>
+                <Condition>(proxy.pathsuffix MatchesPath "/sub")</Condition>
+            </Step>
+            <Step>
+                <Name>Extract-Value</Name>
+            </Step>
+            <Step>
+                <Name>print-output</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/calculator</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+        <VirtualHost>default</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

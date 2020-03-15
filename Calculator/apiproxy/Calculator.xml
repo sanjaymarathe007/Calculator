@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="14" name="Calculator">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1470059928092</CreatedAt>
+    <CreatedBy>ankit.chunduru@gmail.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>Calculator</DisplayName>
+    <LastModifiedAt>1470059975743</LastModifiedAt>
+    <LastModifiedBy>ankit.chunduru@gmail.com</LastModifiedBy>
+    <Policies>
+        <Policy>Addition</Policy>
+        <Policy>Extract-Value</Policy>
+        <Policy>Subraction</Policy>
+        <Policy>create-xml-using-params</Policy>
+        <Policy>extract-param</Policy>
+        <Policy>print-output</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>xsl://Addition.xsl</Resource>
+        <Resource>xsl://Subraction.xsl</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>

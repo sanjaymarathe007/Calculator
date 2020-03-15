@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="extract-param">
+    <DisplayName>Extract Param</DisplayName>
+    <QueryParam name="n1">
+        <Pattern ignoreCase="true">{n1}</Pattern>
+    </QueryParam>
+    <QueryParam name="n2">
+        <Pattern ignoreCase="true">{n2}</Pattern>
+    </QueryParam>
+</ExtractVariables>
